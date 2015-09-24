@@ -1,0 +1,264 @@
+
+;; Function void* matmuld_worker(void*) (_Z14matmuld_workerPv, funcdef_no=12, decl_uid=3069, cgraph_uid=12)
+
+void* matmuld_worker(void*) (void * arg)
+{
+  int k;
+  int j;
+  int i;
+  double * * c;
+  double * * b;
+  double * * a;
+  struct worker_t * t;
+  int _14;
+  long unsigned int _17;
+  long unsigned int _18;
+  double * * _19;
+  double * _20;
+  long unsigned int _21;
+  long unsigned int _22;
+  double * _23;
+  long unsigned int _24;
+  long unsigned int _25;
+  double * * _26;
+  double * _27;
+  long unsigned int _28;
+  long unsigned int _29;
+  double * _30;
+  double _31;
+  long unsigned int _32;
+  long unsigned int _33;
+  double * * _34;
+  double * _35;
+  long unsigned int _36;
+  long unsigned int _37;
+  double * _38;
+  double _39;
+  long unsigned int _40;
+  long unsigned int _41;
+  double * * _42;
+  double * _43;
+  long unsigned int _44;
+  long unsigned int _45;
+  double * _46;
+  double _47;
+  double _48;
+  double _49;
+
+  <bb 2>:
+  t_8 = arg_7(D);
+  a_10 = t_8->a;
+  b_11 = t_8->b;
+  c_12 = t_8->c;
+  i_13 = t_8->start;
+  goto <bb 10>;
+
+  <bb 3>:
+  j_15 = 0;
+  goto <bb 8>;
+
+  <bb 4>:
+  k_16 = 0;
+  goto <bb 6>;
+
+  <bb 5>:
+  _17 = (long unsigned int) i_1;
+  _18 = _17 * 8;
+  _19 = c_12 + _18;
+  _20 = *_19;
+  _21 = (long unsigned int) j_2;
+  _22 = _21 * 8;
+  _23 = _20 + _22;
+  _24 = (long unsigned int) i_1;
+  _25 = _24 * 8;
+  _26 = c_12 + _25;
+  _27 = *_26;
+  _28 = (long unsigned int) j_2;
+  _29 = _28 * 8;
+  _30 = _27 + _29;
+  _31 = *_30;
+  _32 = (long unsigned int) i_1;
+  _33 = _32 * 8;
+  _34 = a_10 + _33;
+  _35 = *_34;
+  _36 = (long unsigned int) k_3;
+  _37 = _36 * 8;
+  _38 = _35 + _37;
+  _39 = *_38;
+  _40 = (long unsigned int) k_3;
+  _41 = _40 * 8;
+  _42 = b_11 + _41;
+  _43 = *_42;
+  _44 = (long unsigned int) j_2;
+  _45 = _44 * 8;
+  _46 = _43 + _45;
+  _47 = *_46;
+  _48 = _39 * _47;
+  _49 = _31 + _48;
+  *_30 = _49;
+  k_51 = k_3 + 1;
+
+  <bb 6>:
+  # k_3 = PHI <k_16(4), k_51(5)>
+  if (k_3 <= 1023)
+    goto <bb 5>;
+  else
+    goto <bb 7>;
+
+  <bb 7>:
+  j_52 = j_2 + 1;
+
+  <bb 8>:
+  # j_2 = PHI <j_15(3), j_52(7)>
+  if (j_2 <= 1023)
+    goto <bb 4>;
+  else
+    goto <bb 9>;
+
+  <bb 9>:
+  i_53 = i_1 + 1;
+
+  <bb 10>:
+  # i_1 = PHI <i_13(2), i_53(9)>
+  _14 = t_8->end;
+  if (_14 > i_1)
+    goto <bb 3>;
+  else
+    goto <bb 11>;
+
+  <bb 11>:
+  return;
+
+}
+
+
+
+;; Function void pthread_matmuld(double**, double**, double**, int) (_Z15pthread_matmuldPPdS0_S0_i, funcdef_no=13, decl_uid=3094, cgraph_uid=13)
+
+void pthread_matmuld(double**, double**, double**, int) (double * * a, double * * b, double * * c, int nthr)
+{
+  struct worker_t * tInfo;
+  pthread_t * thr;
+  int i;
+  long unsigned int iftmp.1;
+  long unsigned int iftmp.0;
+  sizetype _9;
+  pthread_t * _14;
+  sizetype _16;
+  struct worker_t * _20;
+  long unsigned int _23;
+  long unsigned int _24;
+  struct worker_t * _25;
+  long unsigned int _28;
+  long unsigned int _29;
+  struct worker_t * _30;
+  long unsigned int _33;
+  long unsigned int _34;
+  struct worker_t * _35;
+  long unsigned int _38;
+  long unsigned int _39;
+  struct worker_t * _40;
+  long unsigned int _42;
+  long unsigned int _43;
+  struct worker_t * _44;
+  long unsigned int _46;
+  long unsigned int _47;
+  pthread_t * _48;
+
+  <bb 2>:
+  i_7 = 0;
+  _9 = (sizetype) nthr_8(D);
+  if (_9 <= 1143914305352105984)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  iftmp.0_10 = _9 * 8;
+  goto <bb 5>;
+
+  <bb 4>:
+  iftmp.0_11 = 18446744073709551615;
+
+  <bb 5>:
+  # iftmp.0_2 = PHI <iftmp.0_10(3), iftmp.0_11(4)>
+  _14 = operator new [] (iftmp.0_2);
+  thr_15 = _14;
+  _16 = (sizetype) nthr_8(D);
+  if (_16 <= 285978576338026496)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 6>:
+  iftmp.1_17 = _16 * 32;
+  goto <bb 8>;
+
+  <bb 7>:
+  iftmp.1_18 = 18446744073709551615;
+
+  <bb 8>:
+  # iftmp.1_3 = PHI <iftmp.1_17(6), iftmp.1_18(7)>
+  _20 = operator new [] (iftmp.1_3);
+  tInfo_21 = _20;
+  i_22 = 0;
+  goto <bb 10>;
+
+  <bb 9>:
+  _23 = (long unsigned int) i_1;
+  _24 = _23 * 32;
+  _25 = tInfo_21 + _24;
+  _25->a = a_26(D);
+  _28 = (long unsigned int) i_1;
+  _29 = _28 * 32;
+  _30 = tInfo_21 + _29;
+  _30->b = b_31(D);
+  _33 = (long unsigned int) i_1;
+  _34 = _33 * 32;
+  _35 = tInfo_21 + _34;
+  _35->c = c_36(D);
+  _38 = (long unsigned int) i_1;
+  _39 = _38 * 32;
+  _40 = tInfo_21 + _39;
+  _40->start = 0;
+  _42 = (long unsigned int) i_1;
+  _43 = _42 * 32;
+  _44 = tInfo_21 + _43;
+  _44->end = 1024;
+  _46 = (long unsigned int) i_1;
+  _47 = _46 * 8;
+  _48 = thr_15 + _47;
+  pthread_create (_48, 0B, matmuld_worker, tInfo_21);
+  i_50 = i_1 + 1;
+
+  <bb 10>:
+  # i_1 = PHI <i_22(8), i_50(9)>
+  if (i_1 < nthr_8(D))
+    goto <bb 9>;
+  else
+    goto <bb 11>;
+
+  <bb 11>:
+  if (thr_15 != 0B)
+    goto <bb 12>;
+  else
+    goto <bb 13>;
+
+  <bb 12>:
+  operator delete [] (thr_15);
+
+  <bb 13>:
+  if (tInfo_21 != 0B)
+    goto <bb 14>;
+  else
+    goto <bb 15>;
+
+  <bb 14>:
+  operator delete [] (tInfo_21);
+
+  <bb 15>:
+  return;
+
+}
+
+

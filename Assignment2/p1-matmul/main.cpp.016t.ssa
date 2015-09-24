@@ -1,0 +1,1237 @@
+
+;; Function int fprintf(FILE*, const char*, ...) (fprintf, funcdef_no=15, decl_uid=1062, cgraph_uid=15)
+
+int fprintf(FILE*, const char*, ...) (struct FILE * restrict __stream, const char * restrict __fmt)
+{
+  int _5;
+  int _6;
+
+  <bb 2>:
+  _5 = __fprintf_chk (__stream_2(D), 1, __fmt_3(D), __builtin_va_arg_pack ());
+  _6 = _5;
+  return _6;
+
+}
+
+
+
+;; Function int printf(const char*, ...) (printf, funcdef_no=16, decl_uid=1095, cgraph_uid=16)
+
+int printf(const char*, ...) (const char * restrict __fmt)
+{
+  int _4;
+  int _5;
+
+  <bb 2>:
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  _5 = _4;
+  return _5;
+
+}
+
+
+
+;; Function int __gthread_active_p() (_ZL18__gthread_active_pv, funcdef_no=435, decl_uid=10292, cgraph_uid=188)
+
+int __gthread_active_p() ()
+{
+  bool _1;
+  int _2;
+
+  <bb 2>:
+  _1 = __gthrw___pthread_key_create != 0B;
+  _2 = (int) _1;
+  return _2;
+
+}
+
+
+
+;; Function _Atomic_word __gnu_cxx::__exchange_and_add_single(_Atomic_word*, int) (_ZN9__gnu_cxxL25__exchange_and_add_singleEPii, funcdef_no=466, decl_uid=10403, cgraph_uid=219)
+
+_Atomic_word __gnu_cxx::__exchange_and_add_single(_Atomic_word*, int) (_Atomic_word * __mem, int __val)
+{
+  _Atomic_word __result;
+  int _4;
+  int _6;
+  _Atomic_word _8;
+
+  <bb 2>:
+  __result_3 = *__mem_2(D);
+  _4 = *__mem_2(D);
+  _6 = _4 + __val_5(D);
+  *__mem_2(D) = _6;
+  _8 = __result_3;
+  return _8;
+
+}
+
+
+
+;; Function _CharT* std::basic_string<_CharT, _Traits, _Alloc>::_M_data() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (_ZNKSs7_M_dataEv, funcdef_no=699, decl_uid=12437, cgraph_uid=265)
+
+_CharT* std::basic_string<_CharT, _Traits, _Alloc>::_M_data() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (const struct basic_string * const this)
+{
+  char * _3;
+
+  <bb 2>:
+  _3 = this_2(D)->_M_dataplus._M_p;
+  return _3;
+
+}
+
+
+
+;; Function std::basic_string<_CharT, _Traits, _Alloc>::_Rep* std::basic_string<_CharT, _Traits, _Alloc>::_M_rep() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (_ZNKSs6_M_repEv, funcdef_no=696, decl_uid=12442, cgraph_uid=262)
+
+std::basic_string<_CharT, _Traits, _Alloc>::_Rep* std::basic_string<_CharT, _Traits, _Alloc>::_M_rep() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (const struct basic_string * const this)
+{
+  char * _3;
+  char * _4;
+  struct _Rep * _5;
+
+  <bb 2>:
+  _3 = std::basic_string<char>::_M_data (this_2(D));
+  _4 = _3;
+  _5 = _4 + 18446744073709551592;
+  return _5;
+
+}
+
+
+
+;; Function const _CharT* std::basic_string<_CharT, _Traits, _Alloc>::c_str() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (_ZNKSs5c_strEv, funcdef_no=689, decl_uid=12977, cgraph_uid=255)
+
+const _CharT* std::basic_string<_CharT, _Traits, _Alloc>::c_str() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (const struct basic_string * const this)
+{
+  const char * _3;
+  const char * _4;
+
+  <bb 2>:
+  _3 = std::basic_string<char>::_M_data (this_2(D));
+  _4 = _3;
+  return _4;
+
+}
+
+
+
+;; Function static std::basic_string<_CharT, _Traits, _Alloc>::_Rep& std::basic_string<_CharT, _Traits, _Alloc>::_Rep::_S_empty_rep() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (_ZNSs4_Rep12_S_empty_repEv, funcdef_no=703, decl_uid=13212, cgraph_uid=269)
+
+static std::basic_string<_CharT, _Traits, _Alloc>::_Rep& std::basic_string<_CharT, _Traits, _Alloc>::_Rep::_S_empty_rep() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] ()
+{
+  void * __p;
+  struct _Rep & _2;
+
+  <bb 2>:
+  __p_1 = &_S_empty_rep_storage;
+  _2 = __p_1;
+  return _2;
+
+}
+
+
+
+;; Function _Atomic_word __gnu_cxx::__exchange_and_add(volatile _Atomic_word*, int) (_ZN9__gnu_cxxL18__exchange_and_addEPVii, funcdef_no=464, decl_uid=10395, cgraph_uid=217)
+
+_Atomic_word __gnu_cxx::__exchange_and_add(volatile _Atomic_word*, int) (volatile _Atomic_word * __mem, int __val)
+{
+  unsigned int __val.9;
+  unsigned int _6;
+  _Atomic_word _7;
+
+  <bb 2>:
+  __val.9_2 = (unsigned int) __val_1(D);
+  _6 = __atomic_fetch_add_4 (__mem_4(D), __val.9_2, 4);
+  _7 = (_Atomic_word) _6;
+  return _7;
+
+}
+
+
+
+;; Function _Atomic_word __gnu_cxx::__exchange_and_add_dispatch(_Atomic_word*, int) (_ZN9__gnu_cxxL27__exchange_and_add_dispatchEPii, funcdef_no=468, decl_uid=10412, cgraph_uid=221)
+
+_Atomic_word __gnu_cxx::__exchange_and_add_dispatch(_Atomic_word*, int) (_Atomic_word * __mem, int __val)
+{
+  bool retval.8;
+  _Atomic_word _1;
+  int _3;
+  _Atomic_word _9;
+  _Atomic_word _11;
+
+  <bb 2>:
+  _3 = __gthread_active_p ();
+  retval.8_4 = _3 != 0;
+  if (retval.8_4 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  _9 = __gnu_cxx::__exchange_and_add (__mem_6(D), __val_7(D));
+  goto <bb 5>;
+
+  <bb 4>:
+  _11 = __gnu_cxx::__exchange_and_add_single (__mem_6(D), __val_7(D));
+
+  <bb 5>:
+  # _1 = PHI <_9(3), _11(4)>
+  return _1;
+
+}
+
+
+
+;; Function void std::basic_string<_CharT, _Traits, _Alloc>::_Rep::_M_dispose(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (_ZNSs4_Rep10_M_disposeERKSaIcE, funcdef_no=698, decl_uid=13234, cgraph_uid=264)
+
+void std::basic_string<_CharT, _Traits, _Alloc>::_Rep::_M_dispose(const _Alloc&) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (struct _Rep * const this, const struct allocator & __a)
+{
+  bool retval.7;
+  bool retval.6;
+  struct _Rep & _2;
+  struct _Rep & _3;
+  bool _5;
+  long int _6;
+  long int _7;
+  _Atomic_word * _10;
+  int _12;
+
+  <bb 2>:
+  _2 = std::basic_string<char>::_Rep::_S_empty_rep ();
+  _3 = _2;
+  _5 = _3 != this_4(D);
+  _6 = (long int) _5;
+  _7 = __builtin_expect (_6, 0);
+  retval.6_8 = _7 != 0;
+  if (retval.6_8 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+  <bb 3>:
+  _10 = &this_4(D)->D.13246._M_refcount;
+  _12 = __gnu_cxx::__exchange_and_add_dispatch (_10, -1);
+  retval.7_13 = _12 <= 0;
+  if (retval.7_13 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+  <bb 4>:
+  std::basic_string<char>::_Rep::_M_destroy (this_4(D), __a_14(D));
+
+  <bb 5>:
+  return;
+
+}
+
+
+
+;; Function double timestamp() (_Z9timestampv, funcdef_no=671, decl_uid=15072, cgraph_uid=237)
+
+double timestamp() ()
+{
+  struct timeval tv;
+  long int _3;
+  double _4;
+  long int _5;
+  double _6;
+  double _7;
+  double _8;
+
+  <bb 2>:
+  gettimeofday (&tv, 0B);
+  _3 = tv.tv_sec;
+  _4 = (double) _3;
+  _5 = tv.tv_usec;
+  _6 = (double) _5;
+  _7 = _6 * 9.99999999999999954748111825886258685613938723690807819366e-7;
+  _8 = _4 + _7;
+  tv ={v} {CLOBBER};
+  return _8;
+
+}
+
+
+
+;; Function void zero_matrix(double**) (_Z11zero_matrixPPd, funcdef_no=672, decl_uid=15074, cgraph_uid=238)
+
+void zero_matrix(double**) (double * * m)
+{
+  int j;
+  int i;
+  long unsigned int _8;
+  long unsigned int _9;
+  double * * _11;
+  double * _12;
+  long unsigned int _13;
+  long unsigned int _14;
+  double * _15;
+
+  <bb 2>:
+  i_5 = 0;
+  goto <bb 7>;
+
+  <bb 3>:
+  j_7 = 0;
+  goto <bb 5>;
+
+  <bb 4>:
+  _8 = (long unsigned int) i_1;
+  _9 = _8 * 8;
+  _11 = m_10(D) + _9;
+  _12 = *_11;
+  _13 = (long unsigned int) j_2;
+  _14 = _13 * 8;
+  _15 = _12 + _14;
+  *_15 = 0.0;
+  j_17 = j_2 + 1;
+
+  <bb 5>:
+  # j_2 = PHI <j_7(3), j_17(4)>
+  if (j_2 <= 1023)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+  <bb 6>:
+  i_18 = i_1 + 1;
+
+  <bb 7>:
+  # i_1 = PHI <i_5(2), i_18(6)>
+  if (i_1 <= 1023)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 8>:
+  return;
+
+}
+
+
+
+;; Function void rand_matrix(double**) (_Z11rand_matrixPPd, funcdef_no=673, decl_uid=15076, cgraph_uid=239)
+
+void rand_matrix(double**) (double * * m)
+{
+  int j;
+  int i;
+  long unsigned int _8;
+  long unsigned int _9;
+  double * * _11;
+  double * _12;
+  long unsigned int _13;
+  long unsigned int _14;
+  double * _15;
+  double _17;
+  double _18;
+
+  <bb 2>:
+  i_5 = 0;
+  goto <bb 7>;
+
+  <bb 3>:
+  j_7 = 0;
+  goto <bb 5>;
+
+  <bb 4>:
+  _8 = (long unsigned int) i_1;
+  _9 = _8 * 8;
+  _11 = m_10(D) + _9;
+  _12 = *_11;
+  _13 = (long unsigned int) j_2;
+  _14 = _13 * 8;
+  _15 = _12 + _14;
+  _17 = drand48 ();
+  _18 = _17 * 1.0e+3;
+  *_15 = _18;
+  j_20 = j_2 + 1;
+
+  <bb 5>:
+  # j_2 = PHI <j_7(3), j_20(4)>
+  if (j_2 <= 1023)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+  <bb 6>:
+  i_21 = i_1 + 1;
+
+  <bb 7>:
+  # i_1 = PHI <i_5(2), i_21(6)>
+  if (i_1 <= 1023)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 8>:
+  return;
+
+}
+
+
+
+;; Function double report_mflops(double) (_Z13report_mflopsd, funcdef_no=674, decl_uid=15078, cgraph_uid=240)
+
+double report_mflops(double) (double t)
+{
+  double f;
+  double n;
+  double _2;
+  double _3;
+  double _4;
+  double _6;
+  double _8;
+
+  <bb 2>:
+  n_1 = 1.024e+3;
+  _2 = n_1 * n_1;
+  _3 = _2 * n_1;
+  _4 = _3 * 2.0e+0;
+  _6 = t_5(D) * 1.048576e+6;
+  f_7 = _4 / _6;
+  _8 = f_7;
+  return _8;
+
+}
+
+
+
+;; Function bool compare(double**, double**) (_Z7comparePPdS0_, funcdef_no=675, decl_uid=15081, cgraph_uid=241)
+
+bool compare(double**, double**) (double * * a, double * * b)
+{
+  double d;
+  int j;
+  int i;
+  bool _3;
+  long unsigned int _6;
+  long unsigned int _7;
+  double * * _9;
+  double * _11;
+  long unsigned int _12;
+  long unsigned int _13;
+  double * _14;
+  double _15;
+  long unsigned int _16;
+  long unsigned int _17;
+  double * * _19;
+  double * _20;
+  long unsigned int _21;
+  long unsigned int _22;
+  double * _23;
+  double _24;
+  bool _27;
+  bool _30;
+
+  <bb 2>:
+  i_4 = 0;
+  goto <bb 9>;
+
+  <bb 3>:
+  j_5 = 0;
+  goto <bb 7>;
+
+  <bb 4>:
+  _6 = (long unsigned int) i_1;
+  _7 = _6 * 8;
+  _9 = a_8(D) + _7;
+  _11 = *_9;
+  _12 = (long unsigned int) j_2;
+  _13 = _12 * 8;
+  _14 = _11 + _13;
+  _15 = *_14;
+  _16 = (long unsigned int) i_1;
+  _17 = _16 * 8;
+  _19 = b_18(D) + _17;
+  _20 = *_19;
+  _21 = (long unsigned int) j_2;
+  _22 = _21 * 8;
+  _23 = _20 + _22;
+  _24 = *_23;
+  d_25 = _15 - _24;
+  d_26 = d_25 * d_25;
+  if (d_26 > 1.00000000000000008180305391403130954586231382563710212708e-5)
+    goto <bb 5>;
+  else
+    goto <bb 6>;
+
+  <bb 5>:
+  _27 = 0;
+  goto <bb 11>;
+
+  <bb 6>:
+  j_28 = j_2 + 1;
+
+  <bb 7>:
+  # j_2 = PHI <j_5(3), j_28(6)>
+  if (j_2 <= 1023)
+    goto <bb 4>;
+  else
+    goto <bb 8>;
+
+  <bb 8>:
+  i_29 = i_1 + 1;
+
+  <bb 9>:
+  # i_1 = PHI <i_4(2), i_29(8)>
+  if (i_1 <= 1023)
+    goto <bb 3>;
+  else
+    goto <bb 10>;
+
+  <bb 10>:
+  _30 = 1;
+
+  <bb 11>:
+  # _3 = PHI <_27(5), _30(10)>
+  return _3;
+
+}
+
+
+
+;; Function void print_csv(double*, int, std::string) (_Z9print_csvPdiSs, funcdef_no=676, decl_uid=15085, cgraph_uid=242)
+
+void print_csv(double*, int, std::string) (double * r, int n, struct string & restrict fname)
+{
+  int i;
+  struct FILE * fp;
+  const char * _5;
+  const char * _6;
+  struct FILE * _8;
+  long unsigned int _12;
+  long unsigned int _13;
+  double * _15;
+  double _16;
+  int _17;
+
+  <bb 2>:
+  _5 = std::basic_string<char>::c_str (fname_4(D));
+  _6 = _5;
+  _8 = fopen (_6, "w");
+  fp_9 = _8;
+  i_10 = 0;
+  goto <bb 4>;
+
+  <bb 3>:
+  _12 = (long unsigned int) i_1;
+  _13 = _12 * 8;
+  _15 = r_14(D) + _13;
+  _16 = *_15;
+  _17 = i_1 + 1;
+  fprintf (fp_9, "%d,%f\n", _17, _16);
+  i_19 = i_1 + 1;
+
+  <bb 4>:
+  # i_1 = PHI <i_10(2), i_19(3)>
+  if (i_1 < n_11(D))
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+  <bb 5>:
+  fclose (fp_9);
+  return;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = char] (_ZN9__gnu_cxx13new_allocatorIcEC2Ev, funcdef_no=691, decl_uid=7962, cgraph_uid=257)
+
+__gnu_cxx::new_allocator<_Tp>::new_allocator() [with _Tp = char] (struct new_allocator * const this)
+{
+  <bb 2>:
+  return;
+
+}
+
+
+
+;; Function std::allocator< <template-parameter-1-1> >::allocator() [with _Tp = char] (_ZNSaIcEC2Ev, funcdef_no=678, decl_uid=8025, cgraph_uid=244)
+
+std::allocator< <template-parameter-1-1> >::allocator() [with _Tp = char] (struct allocator * const this)
+{
+  <bb 2>:
+  __gnu_cxx::new_allocator<char>::new_allocator (this_1(D));
+  return;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = char] (_ZN9__gnu_cxx13new_allocatorIcED2Ev, funcdef_no=694, decl_uid=7967, cgraph_uid=260)
+
+__gnu_cxx::new_allocator<_Tp>::~new_allocator() [with _Tp = char] (struct new_allocator * const this)
+{
+<L0>:
+  return;
+
+}
+
+
+
+;; Function std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = char] (_ZNSaIcED2Ev, funcdef_no=681, decl_uid=8030, cgraph_uid=247)
+
+std::allocator< <template-parameter-1-1> >::~allocator() [with _Tp = char] (struct allocator * const this)
+{
+  <bb 2>:
+  __gnu_cxx::new_allocator<char>::~new_allocator (this_1(D));
+  return;
+
+}
+
+
+
+;; Function std::basic_string<char>::_Alloc_hider::~_Alloc_hider() (_ZNSs12_Alloc_hiderD2Ev, funcdef_no=685, decl_uid=15235, cgraph_uid=250)
+
+std::basic_string<char>::_Alloc_hider::~_Alloc_hider() (struct _Alloc_hider * const this)
+{
+  <bb 2>:
+  std::allocator<char>::~allocator ();
+  return;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<_Tp>::new_allocator(const __gnu_cxx::new_allocator<_Tp>&) [with _Tp = char] (_ZN9__gnu_cxx13new_allocatorIcEC2ERKS1_, funcdef_no=705, decl_uid=7957, cgraph_uid=271)
+
+__gnu_cxx::new_allocator<_Tp>::new_allocator(const __gnu_cxx::new_allocator<_Tp>&) [with _Tp = char] (struct new_allocator * const this, const struct new_allocator & D.7959)
+{
+  <bb 2>:
+  return;
+
+}
+
+
+
+;; Function std::allocator< <template-parameter-1-1> >::allocator(const std::allocator< <template-parameter-1-1> >&) [with _Tp = char] (_ZNSaIcEC2ERKS_, funcdef_no=701, decl_uid=8020, cgraph_uid=267)
+
+std::allocator< <template-parameter-1-1> >::allocator(const std::allocator< <template-parameter-1-1> >&) [with _Tp = char] (struct allocator * const this, const struct allocator & __a)
+{
+  <bb 2>:
+  __gnu_cxx::new_allocator<char>::new_allocator (this_1(D), __a_2(D));
+  return;
+
+}
+
+
+
+;; Function std::basic_string<_CharT, _Traits, _Alloc>::allocator_type std::basic_string<_CharT, _Traits, _Alloc>::get_allocator() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::allocator_type = std::allocator<char>] (_ZNKSs13get_allocatorEv, funcdef_no=697, decl_uid=12981, cgraph_uid=263)
+
+std::basic_string<_CharT, _Traits, _Alloc>::allocator_type std::basic_string<_CharT, _Traits, _Alloc>::get_allocator() const [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>; std::basic_string<_CharT, _Traits, _Alloc>::allocator_type = std::allocator<char>] (const struct basic_string * const this)
+{
+  struct _Alloc_hider * _2;
+
+  <bb 2>:
+  _2 = &this_1(D)->_M_dataplus;
+  std::allocator<char>::allocator (_3(D), _2);
+  return _3(D);
+
+}
+
+
+
+;; Function std::basic_string<_CharT, _Traits, _Alloc>::~basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (_ZNSsD2Ev, funcdef_no=687, decl_uid=13199, cgraph_uid=253)
+
+std::basic_string<_CharT, _Traits, _Alloc>::~basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>] (struct basic_string * const this)
+{
+  struct allocator_type D.15248;
+  struct _Rep * _4;
+  struct _Rep * _5;
+  struct _Alloc_hider * _8;
+
+  <bb 2>:
+  D.15248 = std::basic_string<char>::_ZNKSs13get_allocatorEv.isra.1 (); [return slot optimization]
+  _4 = std::basic_string<char>::_M_rep (this_3(D));
+  _5 = _4;
+  std::basic_string<char>::_Rep::_M_dispose (_5, &D.15248);
+  std::allocator<char>::~allocator ();
+  D.15248 ={v} {CLOBBER};
+  _8 = &this_3(D)->_M_dataplus;
+  std::basic_string<char>::_Alloc_hider::~_Alloc_hider (_8);
+  return;
+
+}
+
+
+
+;; Function int main(int, char**) (main, funcdef_no=670, decl_uid=15107, cgraph_uid=236)
+
+int main(int, char**) (int argc, char * * argv)
+{
+  int i;
+  int i;
+  int i;
+  int i;
+  int i;
+  double pthread_time;
+  double omp_for_time;
+  double omp_task_time;
+  double serial_time;
+  double t0;
+  double * pthread_results;
+  double * omp_task_results;
+  double * omp_for_results;
+  int nprocs;
+  double * * s;
+  double * * c;
+  double * * b;
+  double * * a;
+  struct allocator D.15134;
+  struct string D.15135;
+  struct allocator D.15131;
+  struct string D.15132;
+  struct allocator D.15128;
+  struct string D.15129;
+  bool retval.5;
+  bool retval.4;
+  bool retval.3;
+  size_t iftmp.2;
+  size_t iftmp.1;
+  size_t iftmp.0;
+  double * * _33;
+  double * * _36;
+  double * * _39;
+  double * * _42;
+  long int _45;
+  sizetype _48;
+  double * _52;
+  sizetype _54;
+  double * _58;
+  sizetype _60;
+  double * _64;
+  long unsigned int _67;
+  long unsigned int _68;
+  double * * _69;
+  void * _71;
+  void * _72;
+  long unsigned int _74;
+  long unsigned int _75;
+  double * * _76;
+  void * _78;
+  void * _79;
+  long unsigned int _81;
+  long unsigned int _82;
+  double * * _83;
+  void * _85;
+  void * _86;
+  long unsigned int _88;
+  long unsigned int _89;
+  double * * _90;
+  void * _92;
+  void * _93;
+  double _109;
+  double _111;
+  double _120;
+  bool _122;
+  long unsigned int _125;
+  long unsigned int _126;
+  sizetype _127;
+  double * _128;
+  double _129;
+  double _131;
+  double _141;
+  bool _143;
+  long unsigned int _146;
+  long unsigned int _147;
+  sizetype _148;
+  double * _149;
+  double _150;
+  double _152;
+  double _162;
+  bool _164;
+  long unsigned int _167;
+  long unsigned int _168;
+  sizetype _169;
+  double * _170;
+  double _171;
+  double _173;
+  long unsigned int _177;
+  long unsigned int _178;
+  double * * _179;
+  double * _180;
+  long unsigned int _181;
+  long unsigned int _182;
+  double * * _183;
+  double * _184;
+  long unsigned int _186;
+  long unsigned int _187;
+  double * * _188;
+  double * _189;
+  long unsigned int _190;
+  long unsigned int _191;
+  double * * _192;
+  double * _193;
+  long unsigned int _195;
+  long unsigned int _196;
+  double * * _197;
+  double * _198;
+  long unsigned int _199;
+  long unsigned int _200;
+  double * * _201;
+  double * _202;
+  long unsigned int _204;
+  long unsigned int _205;
+  double * * _206;
+  double * _207;
+  long unsigned int _208;
+  long unsigned int _209;
+  double * * _210;
+  double * _211;
+  int _236;
+
+  <bb 2>:
+  _33 = operator new [] (8192);
+  a_34 = _33;
+  _36 = operator new [] (8192);
+  b_37 = _36;
+  _39 = operator new [] (8192);
+  c_40 = _39;
+  _42 = operator new [] (8192);
+  s_43 = _42;
+  _45 = sysconf (84);
+  nprocs_46 = (int) _45;
+  printf ("This machine has hardware %d threads\n", nprocs_46);
+  _48 = (sizetype) nprocs_46;
+  if (_48 <= 1143914305352105984)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+  <bb 3>:
+  iftmp.0_49 = _48 * 8;
+  goto <bb 5>;
+
+  <bb 4>:
+  iftmp.0_50 = 18446744073709551615;
+
+  <bb 5>:
+  # iftmp.0_6 = PHI <iftmp.0_49(3), iftmp.0_50(4)>
+  _52 = operator new [] (iftmp.0_6);
+  omp_for_results_53 = _52;
+  _54 = (sizetype) nprocs_46;
+  if (_54 <= 1143914305352105984)
+    goto <bb 6>;
+  else
+    goto <bb 7>;
+
+  <bb 6>:
+  iftmp.1_55 = _54 * 8;
+  goto <bb 8>;
+
+  <bb 7>:
+  iftmp.1_56 = 18446744073709551615;
+
+  <bb 8>:
+  # iftmp.1_7 = PHI <iftmp.1_55(6), iftmp.1_56(7)>
+  _58 = operator new [] (iftmp.1_7);
+  omp_task_results_59 = _58;
+  _60 = (sizetype) nprocs_46;
+  if (_60 <= 1143914305352105984)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+  <bb 9>:
+  iftmp.2_61 = _60 * 8;
+  goto <bb 11>;
+
+  <bb 10>:
+  iftmp.2_62 = 18446744073709551615;
+
+  <bb 11>:
+  # iftmp.2_8 = PHI <iftmp.2_61(9), iftmp.2_62(10)>
+  _64 = operator new [] (iftmp.2_8);
+  pthread_results_65 = _64;
+  i_66 = 0;
+  goto <bb 13>;
+
+  <bb 12>:
+  _67 = (long unsigned int) i_1;
+  _68 = _67 * 8;
+  _69 = a_34 + _68;
+  _71 = operator new [] (8192);
+  _72 = _71;
+  *_69 = _72;
+  _74 = (long unsigned int) i_1;
+  _75 = _74 * 8;
+  _76 = b_37 + _75;
+  _78 = operator new [] (8192);
+  _79 = _78;
+  *_76 = _79;
+  _81 = (long unsigned int) i_1;
+  _82 = _81 * 8;
+  _83 = c_40 + _82;
+  _85 = operator new [] (8192);
+  _86 = _85;
+  *_83 = _86;
+  _88 = (long unsigned int) i_1;
+  _89 = _88 * 8;
+  _90 = s_43 + _89;
+  _92 = operator new [] (8192);
+  _93 = _92;
+  *_90 = _93;
+  i_95 = i_1 + 1;
+
+  <bb 13>:
+  # i_1 = PHI <i_66(11), i_95(12)>
+  if (i_1 <= 1023)
+    goto <bb 12>;
+  else
+    goto <bb 14>;
+
+  <bb 14>:
+  t0_96 = 0.0;
+  serial_time_97 = 0.0;
+  omp_task_time_98 = 0.0;
+  omp_for_time_99 = 0.0;
+  pthread_time_100 = 0.0;
+  rand_matrix (a_34);
+  rand_matrix (b_37);
+  zero_matrix (c_40);
+  zero_matrix (s_43);
+  serial_time_106 = timestamp ();
+  matmuld (a_34, b_37, s_43);
+  _109 = timestamp ();
+  serial_time_110 = _109 - serial_time_106;
+  _111 = report_mflops (serial_time_110);
+  printf ("serial mflop/s = %f\n", _111);
+  printf ("Running OpenMP for:\n");
+  i_114 = 1;
+  goto <bb 18>;
+
+  <bb 15>:
+  zero_matrix (c_40);
+  omp_for_time_117 = timestamp ();
+  omp_for_matmuld (a_34, b_37, c_40, i_2);
+  _120 = timestamp ();
+  omp_for_time_121 = _120 - omp_for_time_117;
+  _122 = compare (c_40, s_43);
+  retval.3_123 = ~_122;
+  if (retval.3_123 != 0)
+    goto <bb 16>;
+  else
+    goto <bb 17>;
+
+  <bb 16>:
+  printf ("wrong answer!\n");
+  goto <bb 19>;
+
+  <bb 17>:
+  _125 = (long unsigned int) i_2;
+  _126 = _125 * 8;
+  _127 = _126 + 18446744073709551608;
+  _128 = omp_for_results_53 + _127;
+  _129 = report_mflops (omp_for_time_121);
+  *_128 = _129;
+  _131 = report_mflops (omp_for_time_121);
+  printf ("%d, %f\n", i_2, _131);
+  i_133 = i_2 + 1;
+
+  <bb 18>:
+  # i_2 = PHI <i_114(14), i_133(17)>
+  if (i_2 <= nprocs_46)
+    goto <bb 15>;
+  else
+    goto <bb 19>;
+
+  <bb 19>:
+  printf ("Running OpenMP task:\n");
+  i_135 = 1;
+  goto <bb 23>;
+
+  <bb 20>:
+  zero_matrix (c_40);
+  omp_task_time_138 = timestamp ();
+  omp_task_matmuld (a_34, b_37, c_40, i_3);
+  _141 = timestamp ();
+  omp_task_time_142 = _141 - omp_task_time_138;
+  _143 = compare (c_40, s_43);
+  retval.4_144 = ~_143;
+  if (retval.4_144 != 0)
+    goto <bb 21>;
+  else
+    goto <bb 22>;
+
+  <bb 21>:
+  printf ("wrong answer!\n");
+  goto <bb 24>;
+
+  <bb 22>:
+  _146 = (long unsigned int) i_3;
+  _147 = _146 * 8;
+  _148 = _147 + 18446744073709551608;
+  _149 = omp_task_results_59 + _148;
+  _150 = report_mflops (omp_task_time_142);
+  *_149 = _150;
+  _152 = report_mflops (omp_task_time_142);
+  printf ("%d, %f\n", i_3, _152);
+  i_154 = i_3 + 1;
+
+  <bb 23>:
+  # i_3 = PHI <i_135(19), i_154(22)>
+  if (i_3 <= nprocs_46)
+    goto <bb 20>;
+  else
+    goto <bb 24>;
+
+  <bb 24>:
+  printf ("Running pThreads:\n");
+  i_156 = 1;
+  goto <bb 28>;
+
+  <bb 25>:
+  zero_matrix (c_40);
+  pthread_time_159 = timestamp ();
+  pthread_matmuld (a_34, b_37, c_40, i_4);
+  _162 = timestamp ();
+  pthread_time_163 = _162 - pthread_time_159;
+  _164 = compare (c_40, s_43);
+  retval.5_165 = ~_164;
+  if (retval.5_165 != 0)
+    goto <bb 26>;
+  else
+    goto <bb 27>;
+
+  <bb 26>:
+  printf ("wrong answer!\n");
+  goto <bb 29>;
+
+  <bb 27>:
+  _167 = (long unsigned int) i_4;
+  _168 = _167 * 8;
+  _169 = _168 + 18446744073709551608;
+  _170 = pthread_results_65 + _169;
+  _171 = report_mflops (pthread_time_163);
+  *_170 = _171;
+  _173 = report_mflops (pthread_time_163);
+  printf ("%d, %f\n", i_4, _173);
+  i_175 = i_4 + 1;
+
+  <bb 28>:
+  # i_4 = PHI <i_156(24), i_175(27)>
+  if (i_4 <= nprocs_46)
+    goto <bb 25>;
+  else
+    goto <bb 29>;
+
+  <bb 29>:
+  i_176 = 0;
+  goto <bb 39>;
+
+  <bb 30>:
+  _177 = (long unsigned int) i_5;
+  _178 = _177 * 8;
+  _179 = a_34 + _178;
+  _180 = *_179;
+  if (_180 != 0B)
+    goto <bb 31>;
+  else
+    goto <bb 32>;
+
+  <bb 31>:
+  _181 = (long unsigned int) i_5;
+  _182 = _181 * 8;
+  _183 = a_34 + _182;
+  _184 = *_183;
+  operator delete [] (_184);
+
+  <bb 32>:
+  _186 = (long unsigned int) i_5;
+  _187 = _186 * 8;
+  _188 = b_37 + _187;
+  _189 = *_188;
+  if (_189 != 0B)
+    goto <bb 33>;
+  else
+    goto <bb 34>;
+
+  <bb 33>:
+  _190 = (long unsigned int) i_5;
+  _191 = _190 * 8;
+  _192 = b_37 + _191;
+  _193 = *_192;
+  operator delete [] (_193);
+
+  <bb 34>:
+  _195 = (long unsigned int) i_5;
+  _196 = _195 * 8;
+  _197 = c_40 + _196;
+  _198 = *_197;
+  if (_198 != 0B)
+    goto <bb 35>;
+  else
+    goto <bb 36>;
+
+  <bb 35>:
+  _199 = (long unsigned int) i_5;
+  _200 = _199 * 8;
+  _201 = c_40 + _200;
+  _202 = *_201;
+  operator delete [] (_202);
+
+  <bb 36>:
+  _204 = (long unsigned int) i_5;
+  _205 = _204 * 8;
+  _206 = s_43 + _205;
+  _207 = *_206;
+  if (_207 != 0B)
+    goto <bb 37>;
+  else
+    goto <bb 38>;
+
+  <bb 37>:
+  _208 = (long unsigned int) i_5;
+  _209 = _208 * 8;
+  _210 = s_43 + _209;
+  _211 = *_210;
+  operator delete [] (_211);
+
+  <bb 38>:
+  i_213 = i_5 + 1;
+
+  <bb 39>:
+  # i_5 = PHI <i_176(29), i_213(38)>
+  if (i_5 <= 1023)
+    goto <bb 30>;
+  else
+    goto <bb 40>;
+
+  <bb 40>:
+  if (a_34 != 0B)
+    goto <bb 41>;
+  else
+    goto <bb 42>;
+
+  <bb 41>:
+  operator delete [] (a_34);
+
+  <bb 42>:
+  if (b_37 != 0B)
+    goto <bb 43>;
+  else
+    goto <bb 44>;
+
+  <bb 43>:
+  operator delete [] (b_37);
+
+  <bb 44>:
+  if (c_40 != 0B)
+    goto <bb 45>;
+  else
+    goto <bb 46>;
+
+  <bb 45>:
+  operator delete [] (c_40);
+
+  <bb 46>:
+  if (s_43 != 0B)
+    goto <bb 47>;
+  else
+    goto <bb 48>;
+
+  <bb 47>:
+  operator delete [] (s_43);
+
+  <bb 48>:
+  std::allocator<char>::allocator (&D.15128);
+  std::basic_string<char>::basic_string (&D.15129, "omp_for.csv", &D.15128);
+
+  <bb 49>:
+  print_csv (omp_for_results_53, nprocs_46, &D.15129);
+
+  <bb 50>:
+  std::basic_string<char>::~basic_string (&D.15129);
+  D.15129 ={v} {CLOBBER};
+  std::allocator<char>::~allocator ();
+  D.15128 ={v} {CLOBBER};
+  std::allocator<char>::allocator (&D.15131);
+  std::basic_string<char>::basic_string (&D.15132, "omp_task.csv", &D.15131);
+
+  <bb 51>:
+  print_csv (omp_task_results_59, nprocs_46, &D.15132);
+
+  <bb 52>:
+  std::basic_string<char>::~basic_string (&D.15132);
+  D.15132 ={v} {CLOBBER};
+  std::allocator<char>::~allocator ();
+  D.15131 ={v} {CLOBBER};
+  std::allocator<char>::allocator (&D.15134);
+  std::basic_string<char>::basic_string (&D.15135, "pthread_results.csv", &D.15134);
+
+  <bb 53>:
+  print_csv (pthread_results_65, nprocs_46, &D.15135);
+
+  <bb 54>:
+  std::basic_string<char>::~basic_string (&D.15135);
+  D.15135 ={v} {CLOBBER};
+  std::allocator<char>::~allocator ();
+  D.15134 ={v} {CLOBBER};
+  if (omp_for_results_53 != 0B)
+    goto <bb 55>;
+  else
+    goto <bb 56>;
+
+  <bb 55>:
+  operator delete [] (omp_for_results_53);
+
+  <bb 56>:
+  if (omp_task_results_59 != 0B)
+    goto <bb 57>;
+  else
+    goto <bb 58>;
+
+  <bb 57>:
+  operator delete [] (omp_task_results_59);
+
+  <bb 58>:
+  if (pthread_results_65 != 0B)
+    goto <bb 59>;
+  else
+    goto <bb 60>;
+
+  <bb 59>:
+  operator delete [] (pthread_results_65);
+
+  <bb 60>:
+  _236 = 0;
+  return _236;
+
+<L64>:
+  std::basic_string<char>::~basic_string (&D.15129);
+  D.15129 ={v} {CLOBBER};
+  resx 2
+
+<L65>:
+  std::allocator<char>::~allocator ();
+  D.15128 ={v} {CLOBBER};
+  resx 1
+
+<L66>:
+  std::basic_string<char>::~basic_string (&D.15132);
+  D.15132 ={v} {CLOBBER};
+  resx 6
+
+<L67>:
+  std::allocator<char>::~allocator ();
+  D.15131 ={v} {CLOBBER};
+  resx 5
+
+<L68>:
+  std::basic_string<char>::~basic_string (&D.15135);
+  D.15135 ={v} {CLOBBER};
+  resx 10
+
+<L69>:
+  std::allocator<char>::~allocator ();
+  D.15134 ={v} {CLOBBER};
+  resx 9
+
+}
+
+

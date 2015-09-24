@@ -1,0 +1,189 @@
+
+;; Function void omp_for_matmuld(double**, double**, double**, int) (_Z15omp_for_matmuldPPdS0_S0_i, funcdef_no=0, decl_uid=2271, cgraph_uid=0)
+
+void omp_for_matmuld(double**, double**, double**, int) (double * * a, double * * b, double * * c, int nthr)
+{
+  struct .omp_data_s.0 .omp_data_o.1;
+
+  <bb 2>:
+  omp_set_num_threads (nthr_2(D));
+  .omp_data_o.1.a = a_4(D);
+  .omp_data_o.1.b = b_6(D);
+  .omp_data_o.1.c = c_8(D);
+  __builtin_GOMP_parallel_start (_Z15omp_for_matmuldPPdS0_S0_i._omp_fn.0, &.omp_data_o.1, 0);
+  _Z15omp_for_matmuldPPdS0_S0_i._omp_fn.0 (&.omp_data_o.1);
+  __builtin_GOMP_parallel_end ();
+  a_13 = .omp_data_o.1.a;
+  b_14 = .omp_data_o.1.b;
+  c_15 = .omp_data_o.1.c;
+  return;
+
+}
+
+
+
+;; Function <built-in> (_Z15omp_for_matmuldPPdS0_S0_i._omp_fn.0, funcdef_no=1, decl_uid=2307, cgraph_uid=2)
+
+<built-in> (struct .omp_data_s.0 * .omp_data_i)
+{
+  int k;
+  int j;
+  int i;
+  int tt.3;
+  int q.2;
+  int _10;
+  int _11;
+  int _16;
+  int _17;
+  int _18;
+  long unsigned int _25;
+  long unsigned int _26;
+  double * * _28;
+  double * * _29;
+  double * _30;
+  long unsigned int _31;
+  long unsigned int _32;
+  double * _33;
+  long unsigned int _34;
+  long unsigned int _35;
+  double * * _36;
+  double * * _37;
+  double * _38;
+  long unsigned int _39;
+  long unsigned int _40;
+  double * _41;
+  double _42;
+  long unsigned int _43;
+  long unsigned int _44;
+  double * * _45;
+  double * * _46;
+  double * _47;
+  long unsigned int _48;
+  long unsigned int _49;
+  double * _50;
+  double _51;
+  long unsigned int _52;
+  long unsigned int _53;
+  double * * _54;
+  double * * _55;
+  double * _56;
+  long unsigned int _57;
+  long unsigned int _58;
+  double * _59;
+  double _60;
+  double _61;
+  double _62;
+
+  <bb 17>:
+
+  <bb 3>:
+  _10 = __builtin_omp_get_num_threads ();
+  _11 = __builtin_omp_get_thread_num ();
+  q.2_12 = 1024 / _10;
+  tt.3_13 = 1024 % _10;
+  if (_11 < tt.3_13)
+    goto <bb 15>;
+  else
+    goto <bb 16>;
+
+  <bb 16>:
+  # q.2_1 = PHI <q.2_15(15), q.2_12(3)>
+  # tt.3_2 = PHI <tt.3_14(15), tt.3_13(3)>
+  _16 = q.2_1 * _11;
+  _17 = _16 + tt.3_2;
+  _18 = _17 + q.2_1;
+  if (_17 >= _18)
+    goto <bb 11>;
+  else
+    goto <bb 14>;
+
+  <bb 14>:
+  i_20 = _17;
+
+  <bb 4>:
+  # i_3 = PHI <i_20(14), i_22(10)>
+  j_21 = 0;
+
+  <bb 9>:
+  # j_4 = PHI <j_21(4), j_24(8)>
+  if (j_4 <= 1023)
+    goto <bb 5>;
+  else
+    goto <bb 10>;
+
+  <bb 10>:
+  i_22 = i_3 + 1;
+  if (i_22 < _18)
+    goto <bb 4>;
+  else
+    goto <bb 11>;
+
+  <bb 5>:
+  k_23 = 0;
+
+  <bb 7>:
+  # k_5 = PHI <k_23(5), k_64(6)>
+  if (k_5 <= 1023)
+    goto <bb 6>;
+  else
+    goto <bb 8>;
+
+  <bb 8>:
+  j_24 = j_4 + 1;
+  goto <bb 9>;
+
+  <bb 6>:
+  _25 = (long unsigned int) i_3;
+  _26 = _25 * 8;
+  _28 = .omp_data_i_27(D)->c;
+  _29 = _28 + _26;
+  _30 = *_29;
+  _31 = (long unsigned int) j_4;
+  _32 = _31 * 8;
+  _33 = _30 + _32;
+  _34 = (long unsigned int) i_3;
+  _35 = _34 * 8;
+  _36 = .omp_data_i_27(D)->c;
+  _37 = _36 + _35;
+  _38 = *_37;
+  _39 = (long unsigned int) j_4;
+  _40 = _39 * 8;
+  _41 = _38 + _40;
+  _42 = *_41;
+  _43 = (long unsigned int) i_3;
+  _44 = _43 * 8;
+  _45 = .omp_data_i_27(D)->a;
+  _46 = _45 + _44;
+  _47 = *_46;
+  _48 = (long unsigned int) k_5;
+  _49 = _48 * 8;
+  _50 = _47 + _49;
+  _51 = *_50;
+  _52 = (long unsigned int) k_5;
+  _53 = _52 * 8;
+  _54 = .omp_data_i_27(D)->b;
+  _55 = _54 + _53;
+  _56 = *_55;
+  _57 = (long unsigned int) j_4;
+  _58 = _57 * 8;
+  _59 = _56 + _58;
+  _60 = *_59;
+  _61 = _51 * _60;
+  _62 = _42 + _61;
+  *_41 = _62;
+  k_64 = k_5 + 1;
+  goto <bb 7>;
+
+  <bb 11>:
+
+  <bb 12>:
+  return;
+
+  <bb 15>:
+  tt.3_14 = 0;
+  q.2_15 = q.2_12 + 1;
+  goto <bb 16>;
+
+}
+
+

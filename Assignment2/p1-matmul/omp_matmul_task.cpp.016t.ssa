@@ -1,0 +1,138 @@
+
+;; Function void do_mv(double**, double**, double**, int) (_Z5do_mvPPdS0_S0_i, funcdef_no=30, decl_uid=3100, cgraph_uid=30)
+
+void do_mv(double**, double**, double**, int) (double * * a, double * * b, double * * c, int i)
+{
+  int k;
+  int j;
+  long unsigned int _9;
+  long unsigned int _10;
+  double * * _12;
+  double * _13;
+  long unsigned int _14;
+  long unsigned int _15;
+  double * _16;
+  long unsigned int _17;
+  long unsigned int _18;
+  double * * _19;
+  double * _20;
+  long unsigned int _21;
+  long unsigned int _22;
+  double * _23;
+  double _24;
+  long unsigned int _25;
+  long unsigned int _26;
+  double * * _28;
+  double * _29;
+  long unsigned int _30;
+  long unsigned int _31;
+  double * _32;
+  double _33;
+  long unsigned int _34;
+  long unsigned int _35;
+  double * * _37;
+  double * _38;
+  long unsigned int _39;
+  long unsigned int _40;
+  double * _41;
+  double _42;
+  double _43;
+  double _44;
+
+  <bb 2>:
+  j_5 = 0;
+  goto <bb 7>;
+
+  <bb 3>:
+  k_7 = 0;
+  goto <bb 5>;
+
+  <bb 4>:
+  _9 = (long unsigned int) i_8(D);
+  _10 = _9 * 8;
+  _12 = c_11(D) + _10;
+  _13 = *_12;
+  _14 = (long unsigned int) j_1;
+  _15 = _14 * 8;
+  _16 = _13 + _15;
+  _17 = (long unsigned int) i_8(D);
+  _18 = _17 * 8;
+  _19 = c_11(D) + _18;
+  _20 = *_19;
+  _21 = (long unsigned int) j_1;
+  _22 = _21 * 8;
+  _23 = _20 + _22;
+  _24 = *_23;
+  _25 = (long unsigned int) i_8(D);
+  _26 = _25 * 8;
+  _28 = a_27(D) + _26;
+  _29 = *_28;
+  _30 = (long unsigned int) k_2;
+  _31 = _30 * 8;
+  _32 = _29 + _31;
+  _33 = *_32;
+  _34 = (long unsigned int) k_2;
+  _35 = _34 * 8;
+  _37 = b_36(D) + _35;
+  _38 = *_37;
+  _39 = (long unsigned int) j_1;
+  _40 = _39 * 8;
+  _41 = _38 + _40;
+  _42 = *_41;
+  _43 = _33 * _42;
+  _44 = _24 + _43;
+  *_23 = _44;
+  k_46 = k_2 + 1;
+
+  <bb 5>:
+  # k_2 = PHI <k_7(3), k_46(4)>
+  if (k_2 <= 1023)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+  <bb 6>:
+  j_47 = j_1 + 1;
+
+  <bb 7>:
+  # j_1 = PHI <j_5(2), j_47(6)>
+  if (j_1 <= 1023)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+  <bb 8>:
+  return;
+
+}
+
+
+
+;; Function void omp_task_matmuld(double**, double**, double**, int) (_Z16omp_task_matmuldPPdS0_S0_i, funcdef_no=31, decl_uid=3116, cgraph_uid=31)
+
+void omp_task_matmuld(double**, double**, double**, int) (double * * a, double * * b, double * * c, int nthr)
+{
+  int i;
+
+  <bb 2>:
+  omp_set_num_threads (nthr_4(D));
+  i_6 = 0;
+  goto <bb 4>;
+
+  <bb 3>:
+  do_mv (a_7(D), b_8(D), c_9(D), i_1);
+  i_11 = i_1 + 1;
+
+  <bb 4>:
+  # i_1 = PHI <i_6(2), i_11(3)>
+  if (i_1 <= 1023)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+  <bb 5>:
+  return;
+
+}
+
+
